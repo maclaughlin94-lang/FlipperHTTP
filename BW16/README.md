@@ -6,7 +6,7 @@
 5. Within Arduino IDE, navigate to the `boards.h` file and un-comment the `#define BOARD_BW16 10` line.
 6. In Arduino IDE, go to Preferences/Settings and add the following URL to the `Additional Boards Manager URLs` field: `https://github.com/Ameba-AIoT/ameba-arduino-d/raw/dev/Arduino_package/package_realtek_amebad_early_index.json`. Click `OK`.
 7. In `Boards Manager`, search for `realtek` and install the `Realtek Ameba Boards (32-bit ARM Cortex)` package. 
-8. In `Libraries`, search for `FlashStorage` and install the `FlashStorage_RTL8720` library by `Khoi Hoang`.
+8. In `Library Manager`, search for `FlashStorage` and install the `FlashStorage_RTL8720` library by `Khoi Hoang`.
 9. Restart your Arduino IDE.
 10. Hold the `BURN` button while connecting your USB-C data cable.
 11. Select the serial port to which your BW16 is connected and choose `Ai-Thinker BW16 (RTL8720DN)` as your board.
