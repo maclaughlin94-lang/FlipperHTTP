@@ -1,6 +1,6 @@
 #pragma once
 #include <Arduino.h>
-#include "boards.h"
+#include "boards.hpp"
 #ifndef BOARD_BW16
 #include <HTTPClient.h>
 #include <WiFiClientSecure.h>

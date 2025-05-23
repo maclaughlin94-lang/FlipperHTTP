@@ -1,11 +1,11 @@
 #pragma once
 #include <Arduino.h>
-#include "boards.h"
+#include "boards.hpp"
 #ifndef BOARD_BW16
 #include <DNSServer.h>
 #endif
-#include "wifi_utils.h"
-#include "uart.h"
+#include "wifi_utils.hpp"
+#include "uart.hpp"
 
 class WiFiAP
 {

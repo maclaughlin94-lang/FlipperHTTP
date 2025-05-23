@@ -1,4 +1,4 @@
-#include "uart.h"
+#include "uart.hpp"
 
 size_t UART::available()
 {

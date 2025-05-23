@@ -1,4 +1,4 @@
-#include "wifi_ap.h"
+#include "wifi_ap.hpp"
 
 #ifndef BOARD_BW16
 static const char *DNS_HOST = "*";

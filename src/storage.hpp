@@ -1,5 +1,5 @@
 #pragma once
-#include "boards.h"
+#include "boards.hpp"
 #if defined(BOARD_PICO_W) || defined(BOARD_PICO_2W) || defined(BOARD_VGM)
 #include <LittleFS.h>
 #elif defined(BOARD_BW16)
