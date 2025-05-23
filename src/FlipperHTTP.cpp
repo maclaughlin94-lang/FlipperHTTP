@@ -3,12 +3,12 @@ Author: JBlanked
 Github: https://github.com/jblanked/FlipperHTTP
 Info: This library is a wrapper around the HTTPClient library and is used to communicate with the FlipperZero over tthis->uart.
 Created: 2024-09-30
-Updated: 2025-05-03
+Updated: 2025-05-23
 */
 
-#include "FlipperHTTP.h"
-#include "wifi_ap.h"
-#include "wifi_deauth.h"
+#include "FlipperHTTP.hpp"
+#include "wifi_ap.hpp"
+#include "wifi_deauth.hpp"
 
 // Load WiFi settings
 bool FlipperHTTP::loadWiFi()

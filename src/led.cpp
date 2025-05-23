@@ -1,4 +1,4 @@
-#include "led.h"
+#include "led.hpp"
 
 #if defined(BOARD_ESP32_C6) || defined(BOARD_ESP32_C3) || defined(BOARD_ESP32_C5)
 #include <Adafruit_NeoPixel.h>

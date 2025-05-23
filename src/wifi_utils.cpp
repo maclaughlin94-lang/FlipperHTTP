@@ -1,4 +1,4 @@
-#include "wifi_utils.h"
+#include "wifi_utils.hpp"
 
 #ifndef BOARD_BW16
 WiFiScanResult wifiScanResults[WIFI_MAX_SCAN];
@@ -184,6 +184,7 @@ String WiFiUtils::scan()
         wifiScanResults[i].ssid = WiFi.SSID(i);
         wifiScanResults[i].rssi = WiFi.RSSI(i);
         wifiScanResults[i].channel = WiFi.channel(i);
+        wifiScanCount++;
         json += "\"";
         if (i < n - 1)
         {

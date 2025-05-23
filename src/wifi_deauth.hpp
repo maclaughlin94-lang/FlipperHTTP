@@ -1,5 +1,5 @@
 #pragma once
-#include "boards.h"
+#include "boards.hpp"
 class WiFiDeauth
 {
 public:

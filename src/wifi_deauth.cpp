@@ -1,6 +1,6 @@
-#include "wifi_deauth.h"
+#include "wifi_deauth.hpp"
 #include "WiFi.h"
-#include "wifi_utils.h"
+#include "wifi_utils.hpp"
 #include <string.h>
 static bool isRunning = false;
 #if defined(BOARD_WIFI_DEV) || defined(BOARD_ESP32_C6) || defined(BOARD_ESP32_CAM) || defined(BOARD_ESP32_S3) || defined(BOARD_ESP32_WROOM) || defined(BOARD_ESP32_WROVER) || defined(BOARD_ESP32_C3) || defined(BOARD_ESP32_C5)
