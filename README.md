@@ -1,5 +1,5 @@
 # FlipperHTTP
-An HTTP library for the Flipper Zero, compatible with the WiFi Developer Board, Raspberry Pi, and other ESP32 devices.
+An HTTP library for the Flipper Zero, compatible with the WiFi Developer Board, BW16, Raspberry Pi, and other ESP32 devices.
 
 Star the repository and [follow me](https://www.github.com/jblanked) to stay updated on new releases and upcoming Flipper apps.
 
@@ -9,9 +9,10 @@ Star the repository and [follow me](https://www.github.com/jblanked) to stay upd
 - Instagram: https://www.instagram.com/jblanked
 - Other: https://www.jblanked.com/social/
 
-Check out this video tutorial showcasing the functionality of all seven applications: https://www.youtube.com/watch?v=xR1ZbpOVTwE
-
-Special thank you to Talking Sasquatch for his support: https://www.youtube.com/watch?v=jYZkdz664Tg
+## Video Tutorials
+- Flashing FlipperHTTP: https://www.youtube.com/watch?v=CoyFrUzKHhI
+- Talking Sasquatch (Review): https://www.youtube.com/watch?v=jYZkdz664Tg 
+- Using FlipperHTTP apps: https://www.youtube.com/watch?v=xR1ZbpOVTwE
 
 ## Apps That Utilize FlipperHTTP
 The following apps integrate FlipperHTTP to enhance their functionality:
@@ -25,7 +26,7 @@ The following apps integrate FlipperHTTP to enhance their functionality:
 - **FlipTrader** - Uses WiFi to fetch stock and currency pair prices on your Flipper Zero: [https://github.com/jblanked/FlipTrader](https://github.com/jblanked/FlipTrader)
 - **FlipWiFi** - A FlipperHTTP companion app for scanning and saving WiFi networks on your Flipper Zero: [https://github.com/jblanked/FlipWiFi](https://github.com/jblanked/FlipWiFi)
 
-All eight applications are available for download at the following link: https://www.flipsocial.net/download/ (or by clicking on the repository link above).
+All applications are available for download at the following link: https://www.jblanked.com/flipper/download/ (or by clicking on the repository link above).
 
 ## Usage
 FlipperHTTP can be utilized by developers in Flipper Zero apps and scripts written in C, JavaScript, and MicroPython. For details, visit: [https://github.com/jblanked/FlipperHTTP/tree/main/Flipper%20Zero](https://github.com/jblanked/FlipperHTTP/tree/main/Flipper%20Zero)
@@ -45,12 +46,13 @@ The FlipperHTTP firmware supports eight boards. Instructions for each board can 
 - **Raspberry Pi Pico W:** [https://github.com/jblanked/FlipperHTTP/tree/main/Raspberry%20Pi%20Pico%20W](https://github.com/jblanked/FlipperHTTP/tree/main/Raspberry%20Pi%20Pico%20W)
 - **Raspberry Pi Pico 2 W:** [https://github.com/jblanked/FlipperHTTP/tree/main/Raspberry%20Pi%20Pico%202%20W](https://github.com/jblanked/FlipperHTTP/tree/main/Raspberry%20Pi%20Pico%202%20W)
 - **Raspberry Pi Zero 2 W:** [https://github.com/jblanked/FlipperHTTP/tree/main/Raspberry%20Pi%20Zero%202%20W](https://github.com/jblanked/FlipperHTTP/tree/main/Raspberry%20Pi%20Zero%202%20W)
+- **ESP32-S3:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-S3](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-S3)
+- **ESP32-C3:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-C3](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-C3)
+- **ESP32-C5:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-C5](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-C5)
 - **ESP32-C6:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-C6](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-C6)
 - **ESP32-Cam:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-Cam](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-Cam)
-- **ESP32-S3:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-S3](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-S3)
 - **ESP32-WROOM:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-WROOM](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-WROOM)
 - **ESP32-WROVER:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-WROVER](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-WROVER)
-- **ESP32-C3:** [https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-WROVER](https://github.com/jblanked/FlipperHTTP/tree/main/ESP32-C3)
 - **BW16:** [https://github.com/jblanked/FlipperHTTP/tree/main/BW16](https://github.com/jblanked/FlipperHTTP/tree/main/BW16)
 
 
