@@ -268,6 +268,31 @@ bool FlipperHTTP::saveWiFi(const String jsonData)
     return true;
 }
 
+void FlipperHTTP::sendLargeMessage(WebSocketClient &ws, String message)
+{
+    const int chunkSize = 90;
+    int totalLength = message.length();
+
+    if (totalLength <= chunkSize)
+    {
+        // If message is small enough, send normally
+        ws.beginMessage(TYPE_TEXT);
+        ws.print(message);
+        ws.endMessage();
+        return;
+    }
+
+    // Send in chunks
+    for (int i = 0; i < totalLength; i += chunkSize)
+    {
+        String chunk = message.substring(i, min(i + chunkSize, totalLength));
+        ws.beginMessage(TYPE_TEXT);
+        ws.print(chunk);
+        ws.endMessage();
+        delay(10); // Small delay between chunks
+    }
+}
+
 void FlipperHTTP::setup()
 {
 #ifdef BOARD_VGM
@@ -1340,9 +1365,7 @@ void FlipperHTTP::loop()
                 {
                     // Read the incoming serial data until newline
                     uartMessage = this->uart.readSerialLine();
-                    ws.beginMessage(TYPE_TEXT);
-                    ws.print(uartMessage);
-                    ws.endMessage();
+                    sendLargeMessage(ws, uartMessage);
                 }
 
                 // Check if there's incoming websocket data

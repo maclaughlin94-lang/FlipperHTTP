@@ -79,8 +79,9 @@ public:
         int headerSize = 0                    // Number of headers
     );
     //
-    bool saveWiFi(String data);                                                                                                             // Save and Load settings to and from storage
-    void setup();                                                                                                                           // Arduino setup function
+    bool saveWiFi(String data); // Save and Load settings to and from storage
+    void setup();
+    void sendLargeMessage(WebSocketClient &ws, String message);                                                                             // Arduino setup function
     bool streamBytes(const char *method, String url, String payload, const char *headerKeys[], const char *headerValues[], int headerSize); // Stream bytes from server
     bool readSerialSettings(String receivedData, bool connectAfterSave);                                                                    // Read the serial data and save the settings
     void loop();                                                                                                                            // Main loop for flipper-http.ino that handles all of the commands
