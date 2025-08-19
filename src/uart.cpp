@@ -13,8 +13,11 @@ size_t UART::available()
 
 void UART::begin(uint32_t baudrate)
 {
-#if defined(BOARD_PICO_W) || defined(BOARD_PICO_2W) || defined(BOARD_PICOCALC_W) || defined(BOARD_PICOCALC_2W)
+#if defined(BOARD_PICO_W) || defined(BOARD_PICO_2W)
     this->serial = new SerialPIO(0, 1);
+    this->serial->begin(baudrate);
+#elif defined(BOARD_PICOCALC_W) || defined(BOARD_PICOCALC_2W)
+    this->serial = new SerialPIO(4, 5);
     this->serial->begin(baudrate);
 #elif defined(BOARD_VGM)
     this->serial = new SerialPIO(this->tx_pin, this->rx_pin);
