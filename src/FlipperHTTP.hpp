@@ -3,7 +3,7 @@ Author: JBlanked
 Github: https://github.com/jblanked/FlipperHTTP
 Info: This library is a wrapper around the HTTPClient library and is used to communicate with the FlipperZero over serial.
 Created: 2024-09-30
-Updated: 2025-05-23
+Updated: 2025-08-19
 
 Change Log:
 - 2024-09-30: Initial commit
@@ -44,6 +44,10 @@ Change Log:
 - 2025-04-30: Added support for the ESP32-C5 board
 - 2025-05-03: Added deauth support for ESP32 and BW16 boards
 - 2025-05-23: Changed from .h to .hpp file extension
+- 2025-08-19:
+    - Updated FlipperHTTP to version 2.0.1
+    - Added sendLargeMessage method to handle websocket messages bigger than 90 bytes (128 was the previous limit)
+    - Added [WIFI/STATUS] command which returns true if the device is connected to WiFi
 */
 #pragma once
 #include "certs.hpp"
@@ -58,7 +62,7 @@ Change Log:
 #include "storage.hpp"
 
 #define BAUD_RATE 115200
-#define FLIPPER_HTTP_VERSION "2.0"
+#define FLIPPER_HTTP_VERSION "2.0.1"
 
 class FlipperHTTP
 {
