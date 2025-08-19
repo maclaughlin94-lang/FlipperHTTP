@@ -48,6 +48,7 @@ Change Log:
     - Updated FlipperHTTP to version 2.0.1
     - Added sendLargeMessage method to handle websocket messages bigger than 90 bytes (128 was the previous limit)
     - Added [WIFI/STATUS] command which returns true if the device is connected to WiFi
+    - Added BOARD_PICOCALC_W and BOARD_PICOCALC_2W for PicoCalc support
 */
 #pragma once
 #include "certs.hpp"

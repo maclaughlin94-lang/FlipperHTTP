@@ -704,7 +704,7 @@ void FlipperHTTP::loop()
         else if (_data.startsWith("[REBOOT]"))
         {
             this->use_led = true;
-#if defined(BOARD_PICO_W) || defined(BOARD_PICO_2W) || defined(BOARD_VGM)
+#if defined(BOARD_PICO_W) || defined(BOARD_PICO_2W) || defined(BOARD_VGM) || defined(BOARD_PICOCALC_W) || defined(BOARD_PICOCALC_2W)
             rp2040.reboot();
 #elif defined(BOARD_BW16)
             ota_platform_reset();

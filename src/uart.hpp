@@ -25,7 +25,7 @@ public:
     void set_pins(uint8_t tx_pin, uint8_t rx_pin);
 #endif
 private:
-#if defined(BOARD_PICO_W) || defined(BOARD_PICO_2W)
+#if defined(BOARD_PICO_W) || defined(BOARD_PICO_2W) || defined(BOARD_PICOCALC_W) || defined(BOARD_PICOCALC_2W)
     SerialPIO *serial;
 #elif defined(BOARD_VGM)
     SerialPIO *serial;
