@@ -66,6 +66,11 @@ WiFi Developer Board -> Flipper
 - 3v3 (Pin 9) -> 3v3
 - GND (Pin 11) -> GND
 
+PicoCalc -> Flipper
+- TX (GPIO 4 - Pin 6) -> Pin 14 (RX)
+- RX (GPIO 5 - Pin 7) -> Pin 13 (TX)
+- GND -> Pin 11 (GND)
+
 ESP32 -> Flipper
 - TX -> Pin 14 (RX)
 - RX -> Pin 13 (TX)
