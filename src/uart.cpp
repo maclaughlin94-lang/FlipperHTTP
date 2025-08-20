@@ -82,6 +82,12 @@ void UART::println(String str)
 #else
     Serial.println(str);
 #endif
+#if defined(BOARD_PICOCALC_W) || defined(BOARD_PICOCALC_2W)
+    if (this->lcd)
+    {
+        this->lcd->text(0, 0, str.c_str());
+    }
+#endif
 }
 
 uint8_t UART::read()
@@ -163,6 +169,19 @@ String UART::readSerialLine()
     }
 #endif
     receivedData.trim();
+#if defined(BOARD_PICOCALC_W) || defined(BOARD_PICOCALC_2W)
+    if (this->lcd)
+    {
+        if (receivedData.length() > 1)
+        {
+            this->lcd->text(0, 0, receivedData.c_str());
+        }
+        else
+        {
+            this->lcd->text(0, 0, "Awaiting...");
+        }
+    }
+#endif
     return receivedData;
 }
 

@@ -49,6 +49,8 @@ Change Log:
     - Added sendLargeMessage method to handle websocket messages bigger than 90 bytes (128 was the previous limit)
     - Added [WIFI/STATUS] command which returns true if the device is connected to WiFi
     - Added BOARD_PICOCALC_W and BOARD_PICOCALC_2W for PicoCalc support
+    - Added LCD class for the PicoCalc
+    - Bumped version to 2.1
 */
 #pragma once
 #include "certs.hpp"
@@ -63,7 +65,7 @@ Change Log:
 #include "storage.hpp"
 
 #define BAUD_RATE 115200
-#define FLIPPER_HTTP_VERSION "2.0.1"
+#define FLIPPER_HTTP_VERSION "2.1"
 
 class FlipperHTTP
 {
@@ -102,10 +104,10 @@ private:
     LED led; // EasyLED object to control the LED
 
 #ifdef BOARD_VGM
-    UART uart;   // UART object to handle serial communication
-    UART uart_2; // UART object to handle serial communication
+    UART *uart;   // UART object to handle serial communication
+    UART *uart_2; // UART object to handle serial communication
 #else
-    UART uart; // UART object to handle serial communication
+    UART *uart; // UART object to handle serial communication
 #endif
     WiFiUtils wifi;         // WiFiUtils object to handle WiFi connections
     StorageManager storage; // StorageManager object to handle storage operations
