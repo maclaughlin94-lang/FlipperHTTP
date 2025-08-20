@@ -8,12 +8,14 @@ class UART
 public:
     UART()
     {
+#if defined(BOARD_PICOCALC_W) || defined(BOARD_PICOCALC_2W)
         // Initialize LCD for PicoCalc display
         this->lcd = new LCD();
         if (this->lcd)
         {
             this->lcd->text(0, 0, "Ready...");
         }
+#endif
     }
     size_t available();
     void begin(uint32_t baudrate);
