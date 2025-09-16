@@ -759,6 +759,19 @@ void FlipperHTTP::loop()
                 this->uart->println(F("false"));
             }
         }
+        // Handle [WIFI/SSID] command
+        else if (_data == "[WIFI/SSID]")
+        {
+            String ssid = this->wifi.getSSID();
+            if (ssid != "")
+            {
+                this->uart->println(ssid);
+            }
+            else
+            {
+                this->uart->println(F("[ERROR] Not connected to WiFi."));
+            }
+        }
         // Handle [WIFI/CONNECT] command
         else if (_data == "[WIFI/CONNECT]")
         {
