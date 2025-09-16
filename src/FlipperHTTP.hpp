@@ -3,7 +3,7 @@ Author: JBlanked
 Github: https://github.com/jblanked/FlipperHTTP
 Info: This library is a wrapper around the HTTPClient library and is used to communicate with the FlipperZero over serial.
 Created: 2024-09-30
-Updated: 2025-08-19
+Updated: 2025-09-15
 
 Change Log:
 - 2024-09-30: Initial commit
@@ -51,6 +51,10 @@ Change Log:
     - Added BOARD_PICOCALC_W and BOARD_PICOCALC_2W for PicoCalc support
     - Added LCD class for the PicoCalc
     - Bumped version to 2.1
+- 2025-09-15:
+    - Added getSSID() method to WiFiUtils class
+    - [WIFI/SSID] command to get the SSID of the connected network
+    - Bumped version to 2.1.1
 */
 #pragma once
 #include "certs.hpp"
@@ -65,7 +69,7 @@ Change Log:
 #include "storage.hpp"
 
 #define BAUD_RATE 115200
-#define FLIPPER_HTTP_VERSION "2.1"
+#define FLIPPER_HTTP_VERSION "2.1.1"
 
 class FlipperHTTP
 {

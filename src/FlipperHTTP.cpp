@@ -3,7 +3,7 @@ Author: JBlanked
 Github: https://github.com/jblanked/FlipperHTTP
 Info: This library is a wrapper around the HTTPClient library and is used to communicate with the FlipperZero over serial.
 Created: 2024-09-30
-Updated: 2025-08-19
+Updated: 2025-09-15
 */
 
 #include "FlipperHTTP.hpp"
@@ -757,6 +757,19 @@ void FlipperHTTP::loop()
             else
             {
                 this->uart->println(F("false"));
+            }
+        }
+        // Handle [WIFI/SSID] command
+        else if (_data == "[WIFI/SSID]")
+        {
+            String ssid = this->wifi.getSSID();
+            if (ssid != "")
+            {
+                this->uart->println(ssid);
+            }
+            else
+            {
+                this->uart->println(F("[ERROR] Not connected to WiFi."));
             }
         }
         // Handle [WIFI/CONNECT] command
